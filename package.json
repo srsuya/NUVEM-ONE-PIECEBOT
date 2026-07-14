@@ -1,0 +1,56 @@
+{
+  "name": "nuvem-one-piecebot",
+  "version": "1.0.0",
+  "description": "☁️ Nuvem Bot - Bot WhatsApp Multi Device com RPG One Piece, Sistema de Economia, VIP, Missões e muito mais",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "setup": "node scripts/setup.js",
+    "update": "node scripts/update.js",
+    "db:init": "node scripts/database.js",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "clean": "rm -rf dist temp logs",
+    "pre-commit": "npm run lint && npm run format"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "baileys",
+    "typescript",
+    "nodejs",
+    "rpg",
+    "one-piece",
+    "multi-device"
+  ],
+  "author": "srsuya",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.4.0",
+    "axios": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "pino": "^8.17.2",
+    "pino-pretty": "^10.3.1",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
